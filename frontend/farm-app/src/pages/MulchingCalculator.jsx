@@ -57,7 +57,7 @@ const MulchingCalculator = () => {
         try {
             // [TODO] 백엔드 API 호출 (REST API)
             // 실제 구현 시 아래 주소를 백엔드 주소로 변경하세요 (예: http://localhost:8080/api/calculate)
-            const response = await fetch('http://localhost:8080/api/calculator/mulchingCalculator', {
+            const response = await fetch('/api/calculator/mulchingCalculator', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

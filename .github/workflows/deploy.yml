@@ -1,0 +1,19 @@
+name: Deploy to Raspberry Pi
+
+on:
+  push:
+    branches: [ "master" ]
+
+jobs:
+  deploy:
+    runs-on: self-hosted  # <--- 바로 여기에 적는 겁니다! (터미널 입력 X)
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Docker Compose Restart
+        run: |
+          docker compose down
+          docker compose up --build -d
+          docker image prune -f
