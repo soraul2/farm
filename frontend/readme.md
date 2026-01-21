@@ -1,9 +1,16 @@
-## 🔄 버전 및 업데이트 정보 (Changelog)
+# React + Vite
 
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-### v.farm-0.0.8-SNAPSHOT (2026-01-16) (Current)
-* ** REST API 형태로 아예 프론트와 백엔드를 분리하는 작업을 완료하였음.DATA**
-* ** SWAGGER 을 통한 API 명세서 다시 작성 완료**
-* ** 10억이 넘어가면 원이 표시가 안되는 부분 에러 발생하여 추후 수정 처리 필요**
-* ** 프론트 부분에서 index page , farmcalculator 페이지 작성 완료**
-* ** 테스트 완료 및 디자인 통일을 위한 ai 템플릿 까지 생성 완료**
+Currently, two official plugins are available:
+
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+
+## React Compiler
+
+The React Compiler is currently not compatible with SWC. See [this issue](https://github.com/vitejs/vite-plugin-react/issues/428) for tracking the progress.
+
+## Expanding the ESLint configuration
+
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
