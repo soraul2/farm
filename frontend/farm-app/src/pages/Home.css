@@ -1,0 +1,155 @@
+/* Home.css */
+
+/* 기본 리셋 및 폰트 설정 */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background-color: #f5f5f7; /* Apple Light Gray */
+  color: #1d1d1f;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 전체 화면 레이아웃 (중앙 정렬) */
+.app-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* 메인 카드 (컨테이너) */
+.main-card {
+  background-color: #ffffff;
+  width: 100%;
+  max-width: 500px;
+  border-radius: 24px;
+  padding: 40px 30px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05); /* 부드러운 확산 그림자 */
+  display: flex;
+  flex-direction: column;
+  /* gap: 30px; -> gap 대신 개별 요소 마진으로 조정 */
+}
+
+/* 헤더 영역 */
+.header {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.header h1 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #1d1d1f;
+  margin-bottom: 8px;
+}
+
+.header p {
+  font-size: 15px;
+  font-weight: 500;
+  color: #86868b; /* 서브 텍스트 그레이 */
+}
+
+/* 구분선 */
+.divider {
+  border: none;
+  border-top: 1px solid #e5e5e5; /* 아주 연한 회색 */
+  margin: 0 0 20px 0;
+}
+
+/* 안내 문구 */
+.instruction-text {
+  font-size: 15px;
+  font-weight: 500;
+  color: #86868b; /* 서브 텍스트 그레이 */
+  margin-bottom: 30px;
+}
+
+/* 네비게이션 그리드 (메뉴 목록) */
+.nav-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* 개별 메뉴 카드 (버튼 역할) */
+.nav-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f5f5f7; /* 카드 내부의 옅은 배경 */
+  padding: 20px 24px;
+  border-radius: 18px;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  border: 1px solid transparent;
+}
+
+.nav-card:hover {
+  background-color: #e8e8ed;
+  transform: scale(1.02);
+}
+
+.nav-card:active {
+  transform: scale(0.98);
+}
+
+/* 메뉴 텍스트 정보 */
+.nav-info {
+  display: flex;
+  flex-direction: column;
+  gap: 6px; /* 타이틀과 설명 사이 간격 약간 증가 */
+}
+
+.nav-title-row {
+    display: flex;
+    align-items: center;
+    gap: 8px; /* 이모지와 타이틀 간격 */
+}
+
+.nav-title {
+  font-size: 17px;
+  font-weight: 600;
+  color: #1d1d1f;
+}
+
+.nav-emoji {
+    font-size: 20px;
+}
+
+.new-indicator {
+    color: #0071e3;
+    font-size: 10px;
+    margin-left: 6px;
+}
+
+.nav-desc-row {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.nav-desc {
+  font-size: 13px;
+  color: #86868b;
+  font-weight: 500;
+}
+
+/* 화살표 아이콘 */
+.nav-icon-arrow {
+  color: #0071e3;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+/* 로딩 상태 */
+.loading {
+  text-align: center;
+  color: #86868b;
+  padding: 20px;
+}
