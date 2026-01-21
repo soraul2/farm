@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  # 백엔드 (Spring Boot)
+  backend:
+    build: ./backend
+    container_name: farm-backend
+    ports:
+      - "8080:8080"
+    restart: always
+
+  # 프론트엔드 (React + Nginx)
+  frontend:
+    build: ./frontend
+    container_name: farm-frontend
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
+    restart: always
